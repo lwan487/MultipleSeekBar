@@ -2,33 +2,59 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal" 
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="horizontal" >
 
-    
-    <com.wangli.vseekbar.view.VerticalReverseSeekBar
+    <SeekBar
+        android:id="@+id/sb_progress_full"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progressDrawable="@drawable/style_seekbar"
+        android:thumb="@drawable/sb_thumb"
+        android:thumbOffset="0dp" />
+
+    <com.wangli.mulseekbar.view.VerticalReverseSeekBar
         android:id="@+id/seekbar_reverse"
         android:layout_width="wrap_content"
-        android:layout_height="150dip"
-        android:layout_marginRight="30dip"
-        />
-    
-    	<TextView  android:id="@+id/reverse_sb_progresstext"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:layout_below="@+id/seekbar_reverse"
-    	    android:gravity="center"/>
-    
-    <com.wangli.vseekbar.view.VerticalSeekBar android:id="@+id/vertical_Seekbar"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progressDrawable="@drawable/style_seekbar"
+        android:thumb="@drawable/vsb_thumb" />
+
+    <TextView
+        android:id="@+id/reverse_sb_progresstext"
         android:layout_width="wrap_content"
-        android:layout_height="150dip"
-        android:layout_toRightOf="@+id/seekbar_reverse"/>
-    
-    	<TextView  android:id="@+id/vertical_sb_progresstext"
-    	    android:layout_width="wrap_content"
-    	android:layout_toRightOf="@+id/seekbar_reverse"
-    	    android:layout_height="wrap_content"
-    	    android:gravity="center"
-    	    android:layout_below="@+id/vertical_Seekbar"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_reverse"
+        android:gravity="center" />
+
+    <com.wangli.mulseekbar.view.VerticalSeekBar
+        android:id="@+id/vertical_Seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="60dp"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progressDrawable="@drawable/style_seekbar"
+        android:thumb="@drawable/vsb_thumb" />
+
+    <TextView
+        android:id="@+id/vertical_sb_progresstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vertical_Seekbar"
+        android:layout_toRightOf="@+id/seekbar_reverse"
+        android:gravity="center" />
 
 </RelativeLayout>
